@@ -24,11 +24,23 @@ configurations {
     }
 }
 
+repositories {
+    maven { url "https://maven.terraformersmc.com/releases/" }
+
+    maven {
+        name = "Modrinth"
+        url = "https://api.modrinth.com/maven"
+    }
+}
+
 dependencies {
     modImplementation "net.fabricmc:fabric-loader:$rootProject.fabric_loader_version"
 
     modImplementation "net.fabricmc.fabric-api:fabric-api:$rootProject.fabric_api_version"
+    modImplementation "com.terraformersmc:modmenu:13.0.3"
+    modImplementation "me.shedaniel.cloth:cloth-config-fabric:17.0.144"
 
+    modImplementation("maven.modrinth:sublanguage:1.2-SNAPSHOT")
 
     common(project(path: ':common', configuration: 'namedElements')) { transitive false }
     shadowBundle project(path: ':common', configuration: 'transformProductionFabric')

@@ -7,7 +7,7 @@ pluginManagement {
     }
 }
 
-rootProject.name = 'sublangview'
+rootProject.name = 'SubLangView'
 
 include 'common'
 include 'fabric'

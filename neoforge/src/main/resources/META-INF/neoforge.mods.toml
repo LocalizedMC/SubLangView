@@ -1,12 +1,13 @@
 modLoader = "javafml"
 loaderVersion = "[2,)"
 #issueTrackerURL = ""
-license = "GNU LGPL 3.0"
+license = "LGPL-3.0"
 
 [[mods]]
 modId = "sublangview"
 version = "${version}"
 displayName = "SubLangView"
+displayURL = "https://github.com/LocalizedMC/SubLangView"
 authors = ""
 description = '''
 
