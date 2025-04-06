@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "sublangview",
+  "version": "${version}",
+  "name": "SubLangView",
+  "description": "",
+  "authors": [
+    ""
+  ],
+  "contact": {
+    "homepage": ""
+  },
+  "license": "LGPL-3.0",
+  "icon": "assets/sublangview/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "org.localizedmc.sublangview.fabric.SubLangViewFabric"
+    ],
+    "client": [
+      "org.localizedmc.sublangview.fabric.client.SubLangViewFabricClient"
+    ]
+  },
+  "mixins": [
+    "sublangview.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.12",
+    "minecraft": "~1.21.4",
+    "java": ">=21",
+    "fabric-api": "*"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
