@@ -1,6 +1,6 @@
 modLoader = "javafml"
 loaderVersion = "[2,)"
-#issueTrackerURL = ""
+issueTrackerURL = "https://github.com/LocalizedMC/SubLangView/issues"
 license = "LGPL-3.0"
 
 [[mods]]
@@ -8,18 +8,11 @@ modId = "sublangview"
 version = "${version}"
 displayName = "SubLangView"
 displayURL = "https://github.com/LocalizedMC/SubLangView"
-authors = ""
+authors = "LocalizedMC, TexTrue, Wulian233"
 description = '''
 
 '''
 #logoFile = ""
-
-[[dependencies.sublangview]]
-modId = "neoforge"
-type = "required"
-versionRange = "[21,)"
-ordering = "NONE"
-side = "BOTH"
 
 [[dependencies.sublangview]]
 modId = "minecraft"
@@ -27,7 +20,6 @@ type = "required"
 versionRange = "[1.21.4,)"
 ordering = "NONE"
 side = "BOTH"
-
 
 [[mixins]]
 config = "sublangview.mixins.json"
