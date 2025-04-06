@@ -40,8 +40,6 @@ dependencies {
     modImplementation("com.terraformersmc:modmenu:${rootProject.modmenu_version}") { transitive false }
     modImplementation "me.shedaniel.cloth:cloth-config-fabric:${rootProject.clothconfig_version}"
 
-    modImplementation("maven.modrinth:sublanguage:1.2-SNAPSHOT")
-
     common(project(path: ':common', configuration: 'namedElements')) { transitive false }
     shadowBundle project(path: ':common', configuration: 'transformProductionFabric')
 }

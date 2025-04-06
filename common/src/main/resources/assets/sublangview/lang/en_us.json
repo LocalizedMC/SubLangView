@@ -4,6 +4,7 @@
   "gui.sublangview.namespace": "Namespace: %s",
   "text.autoconfig.sublangview.title": "SubLangView Config",
   "text.autoconfig.sublangview.option.subLanguageCode": "Sub-language Code",
+  "text.autoconfig.sublangview.option.textColor": "Text Color",
   "text.autoconfig.sublangview.option.itemTooltipDisplayMode": "Tooltip Display Mode",
   "config.sublangview.option.original": "Original Text",
   "config.sublangview.option.translation_key": "Translation Key",

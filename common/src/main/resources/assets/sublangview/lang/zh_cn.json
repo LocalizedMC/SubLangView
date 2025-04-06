@@ -4,6 +4,7 @@
   "gui.sublangview.namespace": "命名空间：%s",
   "text.autoconfig.sublangview.title": "副语言视图配置",
   "text.autoconfig.sublangview.option.subLanguageCode": "副语言语言代码",
+  "text.autoconfig.sublangview.option.textColor": "文本颜色",
   "text.autoconfig.sublangview.option.itemTooltipDisplayMode": "工具提示显示模式",
   "config.sublangview.option.original": "原文",
   "config.sublangview.option.translation_key": "翻译键",

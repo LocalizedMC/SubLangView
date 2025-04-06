@@ -1,7 +1,7 @@
 plugins {
     id 'dev.architectury.loom' version '1.10-SNAPSHOT' apply false
     id 'architectury-plugin' version '3.4-SNAPSHOT'
-    id 'com.gradleup.shadow' version '8.1.1' apply false
+    id 'com.gradleup.shadow' version '8.+' apply false
 }
 
 architectury {
@@ -9,27 +9,25 @@ architectury {
 }
 
 allprojects {
+    apply plugin: 'architectury-plugin'
+
     group = rootProject.maven_group
     version = rootProject.mod_version
+
+    tasks.withType(JavaCompile).configureEach {
+        options.encoding = "UTF-8"
+        options.release = 21
+    }
 }
 
 subprojects {
     apply plugin: 'dev.architectury.loom'
-    apply plugin: 'architectury-plugin'
     apply plugin: 'maven-publish'
     apply plugin: "com.gradleup.shadow"
 
     base {
         // Set up a suffixed format for the mod jar names, e.g. `example-fabric`.
         archivesName = "$rootProject.archives_name-$project.name"
-    }
-
-    repositories {
-        // Add repositories to retrieve artifacts from in here.
-        // You should only use this when depending on other mods because
-        // Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
-        // See https://docs.gradle.org/current/userguide/declaring_repositories.html
-        // for more information about repositories.
     }
 
     dependencies {
@@ -48,10 +46,6 @@ subprojects {
 
         sourceCompatibility = JavaVersion.VERSION_21
         targetCompatibility = JavaVersion.VERSION_21
-    }
-
-    tasks.withType(JavaCompile).configureEach {
-        it.options.release = 21
     }
 
     // Configure Maven publishing.
