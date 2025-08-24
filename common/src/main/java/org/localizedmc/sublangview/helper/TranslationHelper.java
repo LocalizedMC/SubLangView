@@ -6,7 +6,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableTextContent;
-import net.minecraft.util.Formatting;
 
 public class TranslationHelper {
     public static TranslationStorage subTranslationStorage;

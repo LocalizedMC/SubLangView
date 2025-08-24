@@ -1,5 +1,5 @@
 plugins {
-    id 'com.github.johnrengelman.shadow'
+    id 'com.gradleup.shadow'
 }
 
 architectury {
@@ -37,10 +37,8 @@ dependencies {
     modImplementation "net.fabricmc:fabric-loader:$rootProject.fabric_loader_version"
 
     modImplementation "net.fabricmc.fabric-api:fabric-api:$rootProject.fabric_api_version"
-    modImplementation "com.terraformersmc:modmenu:13.0.3"
-    modImplementation "me.shedaniel.cloth:cloth-config-fabric:17.0.144"
-
-    modImplementation("maven.modrinth:sublanguage:1.2-SNAPSHOT")
+    modImplementation("com.terraformersmc:modmenu:${rootProject.modmenu_version}") { transitive false }
+    modImplementation "me.shedaniel.cloth:cloth-config-fabric:${rootProject.clothconfig_version}"
 
     common(project(path: ':common', configuration: 'namedElements')) { transitive false }
     shadowBundle project(path: ':common', configuration: 'transformProductionFabric')
@@ -60,5 +58,7 @@ shadowJar {
 }
 
 remapJar {
-    input.set shadowJar.archiveFile
+    inputFile.set shadowJar.archiveFile
+    dependsOn shadowJar
+    archiveClassifier.set(null)
 }
