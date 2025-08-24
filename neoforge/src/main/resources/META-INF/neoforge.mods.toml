@@ -8,7 +8,7 @@ modId = "sublangview"
 version = "${version}"
 displayName = "SubLangView"
 displayURL = "https://github.com/LocalizedMC/SubLangView"
-authors = "LocalizedMC, TexTrue, Wulian233"
+authors = "TexTrue, Wulian233"
 description = '''
 
 '''
